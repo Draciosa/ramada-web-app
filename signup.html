@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title> Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/signup.css">
+</head>
+<body>
+  <div>
+       <header>
+         <div id="navLinks">
+           <a href="home.html">
+           <img class="logo" src="static/images/Ramada-logo-880x660.png"></img>
+          </a>
+           <ul >
+             <li><a href="home.html">HOME</a></li>
+             <li><a href="login.html">LOGIN</a></li>
+             <li><a href="maintenance.html">MAINTENANCE</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="login-container">
+          <form class="form-section" action="/login" method="post">
+          <h1> Signup</h1>
+
+          <input type="text" name="username" placeholder="Username"/>
+          <input type="email" name="email" placeholder="Email"/>
+          <input type="password" name="password" placeholder="Password"/>
+          <input type="password" name="confirm_password" placeholder="Confirm Password"/>
+          <input type="text" name="Unique_id" placeholder="Unique-id"/>
+          <input type="submit" name="login-button">
+
+          <br>
+          </form>
+          <a href="login.html">Already have an account? Login</a>
+        </div>
+      </div>
+      </body>
+</html>

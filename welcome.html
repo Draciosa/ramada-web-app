@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title> Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/welcome.css')}}">
+</head>
+<body>
+  <div>
+       <header>
+         <div id="navLinks">
+           <a href="/">
+           <img class="logo" src="{{url_for('static',filename='img/Ramada-logo-880x660.png')}}"></img>
+          </a>
+           <ul >
+             <li><a href="/">HOME</a></li>
+             <li><a href="/login">LOGIN</a></li>
+             <li><a href="/maintenance">MAINTENANCE</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="login-container">
+          <h1> Welcome</h1>
+          <a href="/signup">Go to Home</a>
+      </div>
+      </body>
+</html>

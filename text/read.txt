@@ -1,0 +1,31 @@
+pip install flask
+pip install PyMySQL
+pip install SQLAlchemy
+
+watch how to create databases and tables in xampp on youtube
+
+open xampp control panel using the start button after xampp is installed
+turn on apache and mysql
+go to the browser and type http://localhost/dashboard/ in the search bar
+
+name the database that you are going to create in xampp as:ramada
+name the table that will insert all queries as 'queries'
+it should have 2 rows 'sno' and customer_query
+sno should be set to primary key , which happens automatically when you set ot to auto_increment(A_I)
+customer_query should be set to text
+and save
+
+name the table that will insert all loggedin info  as 'users'
+it should have 3 rows 'sno' and 'username' and 'password'
+sno should be set to primary key , which happens automatically when you set ot to auto_increment(A_I)
+set  username to text
+and password to varchar
+and save
+
+now that you have done all of this
+using the command prompt locate the  'main.py' file and execute it
+if everything goes well you should see  , dont ptrss control c as it will stop the server
+
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+open a new tab and paste 'http://127.0.0.1:5000/' in the search bar
