@@ -1,0 +1,24 @@
+.navbar{
+    background-color: black !important;
+}
+
+.loginBox{
+    margin: 10% auto;
+    border:1px;
+    border-radius: 5px;
+    padding: 30px 20px;
+    box-shadow: 0 0 10px 2px rgba(0,0, 0, 0.1);
+}
+
+.loginBox:hover{
+    margin: 10% auto;
+    border:1px;
+    border-radius: 5px;
+    padding: 30px 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px 2px rgba(0,0, 0, 0.2);
+}
+
+.text-secondary{
+    text-decoration: none !important;
+}

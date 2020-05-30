@@ -29,3 +29,10 @@ const revealSection = () => {
 window.addEventListener('load', () => revealSection());
 
 window.addEventListener('scroll', () => revealSection());
+
+
+
+
+
+
+

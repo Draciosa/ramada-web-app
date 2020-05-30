@@ -15,9 +15,15 @@
 .navbar {
     margin: 0;
     padding:0;
+    background-color: transparent !important;
+    transition: 0.2s ease-in;
 }
 
+.navbar.scrolled{
+    background: black !important;
+}
 
+    
 .navbar-brand img{
     width: 80px;
     height: auto;
@@ -31,7 +37,7 @@
 .navLinks li{
     display: inline-block;
     text-align: center;
-    padding-right: 15px;
+    
 }
 
 .navLinks li a {
@@ -50,18 +56,11 @@
     background-color: white ;
 }
 
-.bg-dark{
-    background-color: transparent !important;
-}
-
-.bg-dark.scrolled{
-    background: #e32636 !important;
-}
 /* navbar end */
 
 
  .footer{
-     background-color:#e32636 ;
+     background-color:black ;
      padding-top: 5px;
      color: white;
  }
@@ -75,11 +74,16 @@
     margin-inline-end: 0px;
  }
  .footer a{
-     color: whitesmoke;
+     color: whitesmoke;     
 }
 .footer i{
-    font-size: 25px;
+    font-size: 24;
     margin-right: 10px;
+}
+
+.footer a:hover, i :hover,p :hover{
+  color: #e32636;
+  text-decoration: none;
 }
 
 
@@ -98,7 +102,7 @@
  .imgCard:hover img{
      transform: scale(1.5);
  }
-
+ 
  .card{
      margin: 20px;
  }
@@ -106,7 +110,7 @@
  .card-body{
      box-shadow: 0 0 2px 2px rgba(0,0, 0, 0.1);
  }
-
+ 
 
 /* scroll reveal */
 
@@ -133,13 +137,13 @@
 
 /* Change navbar styling on small viewports */
 @media (max-width: 988px) {
-
+   
     .bg-dark{
         background:#e32636 !important;
     }
     .collapse, .navbar-collapse{
         background:#e32636 !important;
-
+        
     }
     .navbar-brand img{
         width: 60px;
@@ -148,19 +152,19 @@
     .navLinks li{
         margin: 10px;
     }
-
-
+    
+    
 }
 
 
 @media (max-width: 320px) {
-
-    .bg-dark{
+   
+    .navbar{
         background:#e32636 !important;
     }
     .collapse, .navbar-collapse{
         background:#e32636 !important;
-
+        
     }
     .navLinks li{
         margin: 10px;
@@ -168,5 +172,8 @@
     .card{
         margin: 5px;
     }
-
+    
 }
+
+
+

@@ -1,0 +1,22 @@
+@import url("bootstrap.min.css");
+.table{
+  width: 700px;
+}
+.table thead{
+  font-size: 20px;
+}
+table, th, td {
+  border: 3px solid white;
+  color: white;
+}
+.main{
+  width: 700px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.main h1{
+  color: white;
+}
+body{
+    background-color: black;
+}
