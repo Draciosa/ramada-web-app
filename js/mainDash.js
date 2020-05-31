@@ -1,11 +1,11 @@
-var head = document.getElementsByTagName('HEAD')[0];
-
-var link = document.createElement('link');
-
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = '../css/mainDash.css';
-head.appendChild(link);
+// var head = document.getElementsByTagName('HEAD')[0];
+//
+// var link = document.createElement('link');
+//
+// link.rel = 'stylesheet';
+// link.type = 'text/css';
+// link.href = '../css/mainDash.css';
+// head.appendChild(link);
 
 // link.rel = 'stylesheet';
 // link.type = 'text/css';

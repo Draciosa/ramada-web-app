@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(24,24,24);
+}
+
+.jumbotron{
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+}
+.jumbotron h1{
+    color: #ffbf00;
+}
+/* navbar CSS */
+.navbar{
+    padding: 0%;
+    margin: 0%;
+    transition: 0.2s ease-in;
+    background-color: rgb(0, 0, 0,0.9) !important;
+    /* background: transparent !important; */
+}
+/* .navbar.scrolled{
+    background: white !important;
+} */
+
+.navbar-brand img{
+    width: 150px;
+    height: auto;
+    margin: 5px;
+    padding-left: 40px;
+    -webkit-filter: drop-shadow(2px 2px 2px #222 );
+     filter: drop-shadow(2px 2px 2px #222);
+}
+.nav-item a:hover{
+    color:  #e32636 !important;
+}
+
+
+/* Carousel CSS */
+.carousel{
+    border: 5px solid;
+    color: white;
+    box-shadow: 0 0 20px 7px rgba(0,0, 0, 0.1);
+}
+
+
+/* Cards CSS */
+.card{
+    margin: 20px;
+    color: white;
+    background-color: rgb(0, 0, 0,0.9) !important;
+    border: 5px solid;
+    padding: 10px;
+}
+
+.card h3{
+    color: #ffbf00;
+}
+.card p{
+    color: white;
+}
+.card-img{
+    overflow: hidden;
+}
+
+.card-img img{
+     transition: all 1s ease;
+ }
+
+ .card-img:hover img{
+     transform: scale(1.5);
+
+ }
+
+ .card-body{
+     box-shadow: 0 0 2px 2px rgba(0,0, 0, 0.1);
+ }
+
+ /* Footer CSS */
+ .footer{
+    padding-top: 10px;
+    background-color: rgb(0, 0, 0,0.9) !important;
+ }
+ .footer a{
+     color: white;
+ }
+
+ .footer p{
+    text-decoration: none;
+    display: block;
+}
+
+
+.footer i{
+    font-size: 24;
+    margin-right: 10px;
+}
+
+ .footer a:hover, i :hover{
+    color: #ffbf00;
+    text-decoration: none;
+  }

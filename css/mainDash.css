@@ -1,22 +1,31 @@
-@import url("bootstrap.min.css");
-.table{
-  width: 700px;
+.nav-link{
+    color: #ffffff;
 }
-.table thead{
-  font-size: 20px;
+.nav-link:hover{
+    color: #E63946;
 }
-table, th, td {
-  border: 3px solid white;
-  color: white;
-}
-.main{
-  width: 700px;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-.main h1{
-  color: white;
-}
-body{
-    background-color: black;
-}
+.sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 100;
+    padding: 70px 0 0 10px;
+    border-right: 1px solid #d3d3d3;
+  }
+
+  .sidebar a:hover{
+      color: #E63946 !important ;
+  }
+  .left-sidebar {
+    position: sticky;
+    top:0;
+    height: calc(100vh - 70px)
+  }
+  .sidebar-nav li .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
+  .container-fluid{
+    margin-top: 100px;
+  }
