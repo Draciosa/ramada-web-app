@@ -1,24 +1,89 @@
-.navbar{
-    background-color: black !important;
+body{
+    background-color: rgb(0, 0, 0,0.9);
 }
 
-.loginBox{
+.loginCard{
     margin: 10% auto;
-    border:1px;
+    border: 1px;
     border-radius: 5px;
     padding: 30px 20px;
+    background-color: white;
     box-shadow: 0 0 10px 2px rgba(0,0, 0, 0.1);
 }
 
-.loginBox:hover{
-    margin: 10% auto;
-    border:1px;
-    border-radius: 5px;
-    padding: 30px 20px;
-    transition: 0.3s ease;
-    box-shadow: 0 0 10px 2px rgba(0,0, 0, 0.2);
+.loginCard h3{
+    color: #e32636;
 }
 
 .text-secondary{
     text-decoration: none !important;
+}
+.navbar{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0,0.9) !important;
+}
+
+.navbar-brand img{
+    width: 150px;
+    height: auto;
+    margin: 5px;
+    padding-left: 40px;
+    -webkit-filter: drop-shadow(2px 2px 2px #222 );
+    filter: drop-shadow(2px 2px 2px #222);
+}
+.logged_in a{
+  padding-left: 20px;
+}
+.nav-item a:hover{
+    color:  #e32636 !important;
+}
+
+.navbar-nav li{
+    display: inline-block;
+    text-align: center;
+    padding-right: 12px;
+}
+.nav-link{
+    color: #ffffff;
+}
+.nav-link:hover{
+    color: #E63946;
+}
+.sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 100;
+    padding: 50px 0 0 10px;
+    border-right: 1px solid #d3d3d3;
+  }
+
+  .sidebar a:hover{
+      color: #E63946 !important ;
+  }
+  .left-sidebar {
+    position: sticky;
+    top:0;
+    height: calc(100vh - 80px)
+  }
+  .sidebar-nav li .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
+  .container-fluid{
+    margin-top: 100px;
+  }
+.logged_in{
+  display: none;
+}
+.log_in{
+  display: none;
+}
+main{
+  color: white;
+}
+table, thead, tbody, tr, td{
+  color: white;
 }

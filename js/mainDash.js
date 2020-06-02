@@ -1,52 +1,9 @@
-// var head = document.getElementsByTagName('HEAD')[0];
-//
-// var link = document.createElement('link');
-//
-// link.rel = 'stylesheet';
-// link.type = 'text/css';
-// link.href = '../css/mainDash.css';
-// head.appendChild(link);
-
-// link.rel = 'stylesheet';
-// link.type = 'text/css';
-// link.href = '../css/mainDashcss';
-// head1.appendChild(link);
-
-
 var complaintInput;
 var roomInput;
 var deleteBtn;
 
 var listItems = [];
 var database;
-
-
-
-function setup(){
-
-  var firebaseConfig = {
-    apiKey: "AIzaSyByiBVICDzwtgKCH7_UAvNEyGsal2yCGVM",
-    authDomain: "ramada-experiment-1.firebaseapp.com",
-    databaseURL: "https://ramada-experiment-1.firebaseio.com",
-    projectId: "ramada-experiment-1",
-    storageBucket: "ramada-experiment-1.appspot.com",
-    messagingSenderId: "220214697552",
-    appId: "1:220214697552:web:a39a886a09f8221c453b55",
-    measurementId: "G-BPMGEX75ET"
-};
-
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
-const auth = firebase.auth();
-const db = firebase.firestore();
-
-database = firebase.database();
-deleteBtn = select('#deleteBtn');
-
-  loadFirebase();
-}
-
 
 function loadFirebase() {
   var ref = database.ref("maintenance");

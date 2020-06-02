@@ -5,21 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="../css/bootstrap.min.css">
-     <link rel="stylesheet" href="../css/Rlogin.css">
-     <link rel="stylesheet" href="../css/login.css">
+     <link rel="stylesheet" href="../css/signup.css">
      <!-- Fontawesome Css -->
      <link rel="stylesheet" href="../css/all.min.css">
 
     <title>Sign Up</title>
-    <!--<script>
-      function checkforblank(){
-        if (document.getElementById("password").value == ""){
-          alert("plase enter name");
-          document.getElementById("password").style.borderColor = "red";
-          return false;
-        }
-      }
-    </script>-->
 </head>
 <body>
   <div class="container-fluid">
@@ -33,9 +23,7 @@
           <div class="collapse navbar-collapse " id="Toggle">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item"><a class="nav-link" href="../home.html" >Home</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="signup.html" >Sign up</a></li>
                   <li class="nav-item"><a class="nav-link" href="login.html" >Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="maintenance.html" >Maintenance</a></li>
               </ul>
           </div>
       </nav>
@@ -55,7 +43,7 @@
 
                     </div>
                     <div class="form-group">
-                        <button id="signupBtn" class="btn btn-outline-danger btn-md">Sign Up</button>
+                        <button id="signupBtn" class="btn btn-primary btn-md">Sign Up</button>
                     </div>
                     <div class="form-group">
                        <small>
@@ -66,46 +54,8 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer">
-           <div class="container">
-               <div class="row mt-2">
-                   <div class="col-md-4 ">
-                       <h3>Ramada</h3>
-                       <p>
-                           We are a young company always looking for new and creative ideas to help you with our products in your everyday work.
-                       </p>
-                       <p><a href="#">Our Team</a></p>
-                   </div>
-                   <div class="col-md-4 col-lg-4 ">
-                       <h3>Contact</h3>
-                       <p><i class="fas fa-map-marker-alt"></i> xyz street,New York</p>
-                       <p><i class="fas fa-phone"></i> Phone: (1234) 567 891  </p>
-                       <p><i class="fas fa-envelope"></i> Email: <a href="Ramada@gmail.com">Ramada@gmail.com</a></p>
-                   </div>
-                   <div class="col-md-4 col-lg-3 ">
-                       <h3>Follow us</h3>
-                       <p>
-                           <a href="#"><i class="fab fa-facebook"></i>Facebook</a><br>
-                           <a href="#"><i class="fab fa-twitter"></i>Twitter</a> <br>
-                           <a href="#"><i class="fab fa-google-plus-g"></i>Google+</a> <br>
-                           <a href="#"><i class="fab fa-instagram"></i>Instagram</a> <br>
-                           <a href="#"><i class="fab fa-pinterest"></i>Pinterest</a>
-                       </p>
-                   </div>
-               </div>
-           </div>
-       </div>
-    </footer>
-
         <!-- The core Firebase JS SDK is always required and must be listed first -->
          <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase.js"></script>
-
-         <!-- TODO: Add SDKs for Firebase products that you want to use
-              https://firebase.google.com/docs/web/setup#available-libraries -->
 
          <script>
            // Your web app's Firebase configuration
@@ -126,12 +76,10 @@
            const auth = firebase.auth();
            const db = firebase.firestore();
 
-           db.settings({ timestampsInSnapshots: true});
-
          </script>
          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
      <script src="../js/auth.js"></script>
-   <!-- Footer -->
+
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="../js/main.js"></script>
