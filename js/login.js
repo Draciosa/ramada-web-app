@@ -18,6 +18,12 @@ const db = firebase.firestore();
 
 auth.onAuthStateChanged(user =>{
   if(user){
+  user.getIdTokenResult().then(idTokenResult =>{
+    console.log(idTokenResult.claims.admin)
+    console.log(user.email);
+    console.log(idTokenResult.claims);
+    console.log(user.auth_time);
+  })
     document.getElementById("logged_in").style.display = "block";
     document.getElementById("log_in").style.display = "none";
 
