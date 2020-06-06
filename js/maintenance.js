@@ -17,6 +17,7 @@ function setup(){
     measurementId: "G-BPMGEX75ET"
 };
 
+
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
@@ -26,20 +27,19 @@ roomInput = select('#room');
 
   var submit = select('#submit');
   submit.mousePressed(sendToFirebase);
-
 }
 
 function sendToFirebase() {
   var complaints = database.ref('maintenance');
-
   var data = {
     complaint: complaintInput.value(),
     room: roomInput.value()
-  }
-
+}
+if(complaintInput.value() == ''){
+  $("#noQuery").modal();
+}
+else{
   var complaint = complaints.push(data, finished);
-  console.log("Firebase generated key: " + complaint.key);
-
   function finished(err) {
     if (err) {
       console.log("ooops, something went wrong.");
@@ -48,4 +48,5 @@ function sendToFirebase() {
       console.log('Data saved successfully');
     }
   }
+}
 }

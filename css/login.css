@@ -87,3 +87,10 @@ main{
 table, thead, tbody, tr, td{
   color: white;
 }
+.modal-body{
+  text-align: center;
+  background-color: rgba(255,0,0,0.9);
+  font-weight: 600;
+  border-radius: 1%;
+  font-size: 20px;
+}

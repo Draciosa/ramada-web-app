@@ -1,3 +1,9 @@
+auth.onAuthStateChanged(user =>{
+  if(user){
+    }
+  else{
+  }
+});
 
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit',(e) => {
@@ -5,31 +11,28 @@ signupForm.addEventListener('submit',(e) => {
 
   const email = signupForm['signup-email'].value;
   const password = signupForm['signup-password'].value;
+  const conPassword = signupForm['signup-confirm-password'].value;
+
+if(email.length == 0 && password.length == 0){
+  $("#provideCreds").modal();
+}
+else if(email.length == 0){
+  $("#noEmail").modal();
+}
+else if(password.length == 0){
+  $("#givePassword").modal();
+}
+else if(password == conPassword){
 
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
-    console.log(cred.user);
+    $("#successfullySignedIn").modal();
     signupForm.reset();
   });
-});
+}
 
-//logout
-// const logout = document.querySelector('#logout');
-// logout.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   auth.signOut().then(() => {
-//     console.log('USER SIGNED OUT');
-//   });
-// });
-//
-// const loginForm = document.querySelector('#login-form');
-// loginForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//
-//   const email = loginForm['login-email'].value;
-//   const password = loginForm['login-password'].value;
-//
-//   auth.signInWithEmailAndPassword(email, password).then(cred => {
-//     console.log(cred.user);
-//     loginForm.reset();
-//   })
-// })
+else {
+  $("#noPassword").modal();
+  signupForm.reset();
+}
+
+});

@@ -41,7 +41,20 @@ loginForm.addEventListener('submit', (e) => {
   const email = loginForm['login-email'].value;
   const password = loginForm['login-password'].value;
 
+  if(email.length == 0 && password.length == 0){
+    $("#provideCreds").modal();
+  }
+  else if(email.length == 0){
+    $("#noEmail").modal();
+  }
+  else if(password.length == 0){
+    $("#givePassword").modal();
+  }
+  else{
+
   auth.signInWithEmailAndPassword(email, password).then(cred => {
     loginForm.reset();
-  })
-})
+  });
+}
+
+});

@@ -1,6 +1,12 @@
-var complaintInput;
-var roomInput;
-var deleteBtn;
+const adminForm = document.querySelector('.admin-form');
+adminForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const adminEmail = document.querySelector('#admin-email').value;
+  const addAdminRole = functions.httpsCallable('addAdminRole');
+  addAdminRole({ email: adminEmail }).then(result => {
+    console.log(result);
+  });
+});
 
 var listItems = [];
 var database;
@@ -17,7 +23,6 @@ function errData(error) {
 }
 function gotData(data) {
   var complaints = data.val();
-
   var keys = Object.keys(complaints);
   var serial = 0;
   clearList();
@@ -25,11 +30,13 @@ function gotData(data) {
   var list = createElement('tr');
   list.parent('data');
 
-  for (var i = 0; i < keys.length; i++) {
+
+  for (var i = keys.length-1; i >= 0 ; i--) {
     serial = serial + 1;
     var key = keys[i];
     var complaint = complaints[key];
-    $("#data").append("<tr><td>" + serial + "</td><td>" + complaint.room + "</td><td>" + complaint.complaint + "</td><td><button id='deleteBtn' class='btn btn-outline-danger btn-md'>Delete</button></td></tr>");
+    $("#data").append("<tr><td>" + serial + "</td><td>" + complaint.room + "</td><td>" + complaint.complaint + "</td><td><button class='btn btn-outline-danger btn-md' onclick=deleteBtn('"+key+"')>Delete</button></td></tr>");
+
 }
 
 function clearList() {
