@@ -14,21 +14,22 @@ firebase.analytics();
 
 const auth = firebase.auth();
 const db = firebase.firestore();
+const adminItems = document.querySelectorAll('.admin');
 
 
 auth.onAuthStateChanged(user =>{
   if(user){
-  user.getIdTokenResult().then(idTokenResult =>{
-    console.log(idTokenResult.claims.admin)
-    console.log(user.email);
-    console.log(idTokenResult.claims);
-    console.log(user.auth_time);
-  })
+    user.getIdTokenResult().then(idTokenResult =>{
+    user.admin = idTokenResult.claims.admin;
+    if(user.admin){
+      adminItems.forEach(item => item.style.display = 'block');
+    }
     document.getElementById("logged_in").style.display = "block";
     document.getElementById("log_in").style.display = "none";
-
+  })
   }
   else{
+    adminItems.forEach(item => item.style.display = 'none');
   document.getElementById("logged_in").style.display = "none";
   document.getElementById("log_in").style.display = "block";
   }
