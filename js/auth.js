@@ -26,6 +26,7 @@ else if(password == conPassword){
 
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     $("#successfullySignedIn").modal();
+    send_verification();
     signupForm.reset();
   });
 }
@@ -36,3 +37,11 @@ else {
 }
 
 });
+function send_verification(){
+  var user = firebase.auth().currentUser;
+  user.sendEmailVerification().then(function(){
+
+  }).catch(function(error){
+
+  });
+}
