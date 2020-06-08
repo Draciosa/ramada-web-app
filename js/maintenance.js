@@ -1,5 +1,16 @@
 var complaintInput;
 var roomInput;
+var _hours;
+var _year;
+var _month;
+var _minutes;
+var _date;
+
+const h = new Date().getHours();
+const y = new Date().getFullYear();
+const mo =  new Date().getMonth() + 1;
+const da = new Date().getDate();
+const mi = new Date().getMinutes();
 
 var listItems = [];
 var database;
@@ -24,6 +35,12 @@ firebase.analytics();
 database = firebase.database();
 complaintInput = select('#complaint');
 roomInput = select('#room');
+_hours = h;
+_minutes = mi;
+_date = da;
+_month = mo;
+_year = y;
+
 
   var submit = select('#submit');
   submit.mousePressed(sendToFirebase);
@@ -33,7 +50,12 @@ function sendToFirebase() {
   var complaints = database.ref('maintenance');
   var data = {
     complaint: complaintInput.value(),
-    room: roomInput.value()
+    room: roomInput.value(),
+    Hours: _hours,
+    Minutes: _minutes,
+    Date: _date,
+    Month: _month,
+    Year: _year
 }
 if(complaintInput.value() == ''){
   $("#noQuery").modal();

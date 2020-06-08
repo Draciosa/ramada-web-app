@@ -35,7 +35,7 @@ function gotData(data) {
     serial = serial + 1;
     var key = keys[i];
     var complaint = complaints[key];
-    $("#data").append("<tr><td>" + serial + "</td><td>" + complaint.room + "</td><td>" + complaint.complaint + "</td><td><button class='btn btn-outline-danger btn-md' onclick=deleteBtn('"+key+"')>Delete</button></td></tr>");
+    $("#data").append("<tr><td>" + serial + "</td><td>" + complaint.room + "</td><td>" + complaint.complaint + "</td><td>" + complaint.Hours + ":" + complaint.Minutes + " " + complaint.Date + "-" + complaint.Month + "-" + complaint.Year + "</td><td><button class='btn btn-outline-danger btn-md' onclick=deleteBtn('"+key+"')>Delete</button></td></tr>");
 
 }
 
