@@ -78,17 +78,37 @@
         </div>
       </div>
 
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" >
+
         <h3>All the complaints from customers</h3>
         <hr>
+
+        <form class="form-inline">
+          <input class="form-control mr-sm-2 " id="myInput" type="text" placeholder="Search..." aria-label="Search">
+
+        </form>
+
+        <div class="row justify-content-center">
+
+          <div class=" text-center completeProgress">
+              <div id="dynamic_completed_data">
+              </div>
+          </div>
+          <div class="text-center pendingProgress">
+              <div id="dynamic_pending_data">
+              </div>
+          </div>
+
+            </div>
         <div class="table-responsive">
-          <table class="table table-bordered table-hover">
+          <table class="table table-bordered table-hover" id="example">
             <thead>
               <tr>
                 <th>#</th>
                 <th>Room N0</th>
                 <th>Query</th>
                 <th>Time</th>
+                <th>Status</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -96,6 +116,7 @@
             </tbody>
           </table>
         </div>
+
       </main>
       <div class="container mt-5 admin" style="display:none;">
           <div class="row justify-content-center ">
@@ -150,6 +171,15 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="updateMessage">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body green">
+            <p>Your Status has been updated</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <script src="../js/p5.js" type="text/javascript"></script>
       <script src="../js/p5.dom.js" type="text/javascript"></script>
@@ -176,6 +206,11 @@
       }
       </script>
       <script>
+      var _updatedStatus;
+      const _st = 'Completed';
+
+      _updatedStatus = _st;
+
       function deleteBtn(key){
           var deleteRef = database.ref("maintenance").child(key);
 
@@ -187,15 +222,34 @@
             $("#wentWrong").modal();
         })
       }
-      </script>
+      function updateBtn(key){
+        var updateRef = database.ref("maintenance").child(key);
+        const newData = {
+          Status: _updatedStatus
+        }
+        updateRef.update(newData);
+        $("#updateMessage").modal();
+      }
+        </script>
       <script src="../js/login.js"></script>
       <script src="../js/mainDash.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/main.js"></script>
-    <script src="../js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#data tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
   </body>
 </html>

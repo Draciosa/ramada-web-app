@@ -90,7 +90,62 @@ table, thead, tbody, tr, td{
 .modal-body{
   text-align: center;
   background-color: rgba(255,0,0,0.9);
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 1%;
   font-size: 20px;
+}
+.modal-body{
+  text-align: center;
+  background-color: rgba(0,255,0,0.9);
+  font-weight: 500;
+  border-radius: 1%;
+  font-size: 20px;
+}
+input {
+  font-family: 'FontAwesome','Helvetica Neue',Helvetica, Arial,sans-serif;
+}
+
+.ProgressCircleBar{
+  margin-left: 400px;
+}
+
+ .round{
+  min-height: 255px;
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+ .round strong{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  transform: translate(-50%);
+  font-size: 40px;
+  color: white;
+  font-weight: 100;
+}
+.round1{
+ min-height: 255px;
+ margin-top: 30px;
+ position: relative;
+ margin-bottom: 20px;
+}
+.round1 strong{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ margin-top: -70px;
+ transform: translate(-50%);
+ font-size: 40px;
+ color: white;
+ font-weight: 100;
+}
+.completeProgress{
+  margin-top: 20px;
+  margin-right: 120px;
+}
+.pendingProgress{
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

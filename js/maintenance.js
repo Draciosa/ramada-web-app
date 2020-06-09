@@ -5,12 +5,14 @@ var _year;
 var _month;
 var _minutes;
 var _date;
+var _status;
 
 const h = new Date().getHours();
 const y = new Date().getFullYear();
 const mo =  new Date().getMonth() + 1;
 const da = new Date().getDate();
 const mi = new Date().getMinutes();
+const s = 'Pending';
 
 var listItems = [];
 var database;
@@ -40,6 +42,7 @@ _minutes = mi;
 _date = da;
 _month = mo;
 _year = y;
+_status = s;
 
 
   var submit = select('#submit');
@@ -55,13 +58,15 @@ function sendToFirebase() {
     Minutes: _minutes,
     Date: _date,
     Month: _month,
-    Year: _year
+    Year: _year,
+    Status: _status
 }
 if(complaintInput.value() == ''){
   $("#noQuery").modal();
 }
 else{
   var complaint = complaints.push(data, finished);
+  $("#submitQuery").modal();
   function finished(err) {
     if (err) {
       console.log("ooops, something went wrong.");
